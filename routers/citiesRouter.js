@@ -22,17 +22,35 @@ router.get("/:id",(req,res)=>{
     res.json (resp)
 })
 
+// STORE
+router.post("/", (req, res) => {
+
+  const newCity = req.body;
+
+  //generating a new id:
+  const newId = cityBlogArray.length > 0 
+    ? Math.max(...cityBlogArray.map(city => city.id)) + 1 
+    : 1;
+
+  //creating a new blog object:
+  const cityBlogToAdd  = {
+    id: newId,
+    title: newCity.title,
+    content: newCity.content,
+    // image: newCity.image,
+    // tags: newCity.tags
+  }
+  
+  cityBlogArray.push(cityToAdd);
+
+  res.json(cityBlogToAdd);
+
+});
 
 // UPDATE
 router.put("/:id", (req, res) => {
 
   res.json("Modify you blog");
-});
-
-
-//MODIFY
-router.patch("/:id", (req, res) => {
-  res.json("Change something in a blog");
 });
 
 

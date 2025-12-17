@@ -16,7 +16,6 @@ app.get("/", (req, res) => {
 app.use("/cities", citiesRouter);
 
 
-
 app.listen(port, function () {
   console.log("Server is connected on port " + port);
 });
