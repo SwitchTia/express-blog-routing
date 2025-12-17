@@ -1,6 +1,7 @@
 console.log("hey");
 import express from "express"
-import { cities } from "./data.js";
+
+import citiesRouter from "./routers/citiesRouter.js"
 
 const app = express();
 const port = 3000;
@@ -11,26 +12,26 @@ app.get("/", (req, res) => {
     res.send("Server of my blog")
 })
 
+app.use("/cities", citiesRouter);
 
+// app.get("/cities", (req, res) => {
 
-app.get("/cities", (req, res) => {
-
-    const newArray = cities.map((city) => {
-    return {
-      ...city, 
-      foto:`/cities/${city.id}.png`
-    }
-  })
-  const city = {
-    info: {
-      total: cities.length,
-    },
-    result: newArray
-  };
+//     const newArray = cities.map((city) => {
+//     return {
+//       ...city, 
+//       foto:`/cities/${city.id}.png`
+//     }
+//   })
+//   const city = {
+//     info: {
+//       total: cities.length,
+//     },
+//     result: newArray
+//   };
   
-  res.json(city);
+//   res.json(city);
 
-})
+// })
 
 
 

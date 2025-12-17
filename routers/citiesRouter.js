@@ -1,5 +1,5 @@
 import express from "express";
-import { cities } from "../data/data.js";
+
 
 const router = express.Router();
 router.get("/", (req, res) => {
@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 // SHOW
 router.get("/:id", (req, res) => {
   
-  res.json(pizza);
+  res.json("Show");
 });
 
 // STORE
