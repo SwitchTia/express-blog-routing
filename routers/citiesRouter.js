@@ -6,30 +6,39 @@ import { citiesArray } from "../data.js";
 const router = express.Router();
 
 //INDEX
-router.get("/cities", (req, res) => {
-
-  const newArray = citiesArray.map((city) => {
-    return {
-      ...city,
-      foto: `/cities/${city.title}.png`
+router.get("/", (req, res)=>{
+    const response = {
+        totalCitiesToVisit: citiesArray.length,
+        listOfCities: citiesArray,
     }
-  })
-  const city = {
-    info: {
-      total: citiesArray.length,
-    },
-    result: newArray
-  };
-
-  res.json(city);
-
+    res.json (response)
 })
 
-// SHOW
-router.get("/:id", (req, res) => {
+// router.get("/cities", (req, res) => {
 
-  res.json("Show");
-});
+//   const newArray = citiesArray.map((city) => {
+//     return {
+//       ...city,
+//       foto: `/cities/${city.title}.png`
+//     }
+//   })
+//   const city = {
+//     info: {
+//       total: citiesArray.length,
+//     },
+//     result: newArray
+//   };
+
+//   res.json(city);
+
+// })
+
+//SHOW
+router.get("/:id",(req,res)=>{
+    const id = parseInt(req.params.id);
+    const resp = citiesArray.find(city => city.id===id);
+    res.json (resp)
+})
 
 // STORE
 router.post("/", (req, res) => {

@@ -3,7 +3,7 @@ const citiesArray = [
         id: 1,
         title: "New York",
         content: "lorem ipsum",
-        image: "imgs/cities/NewYork.png",
+        image: "/imgs/NewYork.png",
         tags: ["newYork"],
     },
     {
@@ -11,28 +11,28 @@ const citiesArray = [
         id: 2,
         title: "Paris",
         content: "lorem ipsum",
-        image: "imgs/cities/Paris.png",
+        image: "imgs/Paris.png",
         tags: ["paris"],
     },
     {
         id: 3,
         title: "Madrid",
         content: "lorem ipsum",
-        image: "imgs/cities/Madrid.png",
+        image: "imgs/Madrid.png",
         tags: ["madrid"],
     },
     {
         id: 4,
         title: "London",
         content: "lorem ipsum",
-        image: "imgs/cities/London.png",
+        image: "imgs/London.png",
         tags: ["london"],
     },
     {
         id: 5,
         title: "Rome",
         content: "lorem ipsum",
-        image: "imgs/cities/Rome.png",
+        image: "imgs/Rome.png",
         tags: ["rome"],
     }
 
