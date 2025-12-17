@@ -37,4 +37,4 @@ const cities = [
     }
 
 ]
-export default cities;
+export  { cities };

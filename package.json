@@ -6,10 +6,11 @@
   "scripts": {
     "start": "node app.js",
     "dev": "node --watch app.js"
-
   },
   "author": "Tiana",
   "license": "ISC",
-  "type": "module"
-  
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
