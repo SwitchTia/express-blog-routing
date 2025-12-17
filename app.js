@@ -1,7 +1,8 @@
 console.log("hey");
 import express from "express"
-
 import citiesRouter from "./routers/citiesRouter.js"
+
+
 
 const app = express();
 const port = 3000;
@@ -14,28 +15,9 @@ app.get("/", (req, res) => {
 
 app.use("/cities", citiesRouter);
 
-// app.get("/cities", (req, res) => {
-
-//     const newArray = cities.map((city) => {
-//     return {
-//       ...city, 
-//       foto:`/cities/${city.id}.png`
-//     }
-//   })
-//   const city = {
-//     info: {
-//       total: cities.length,
-//     },
-//     result: newArray
-//   };
-  
-//   res.json(city);
-
-// })
-
-
 
 
 app.listen(port, function () {
   console.log("Server is connected on port " + port);
 });
+

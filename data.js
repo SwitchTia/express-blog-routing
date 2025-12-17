@@ -1,4 +1,4 @@
-const cities = [
+const citiesArray = [
     {
         id: 1,
         title: "New York",
@@ -37,4 +37,4 @@ const cities = [
     }
 
 ]
-export  { cities };
+export  { citiesArray };

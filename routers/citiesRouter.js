@@ -1,15 +1,33 @@
 import express from "express";
+import { citiesArray } from "../data.js";
+
 
 
 const router = express.Router();
-router.get("/", (req, res) => {
-  
-  res.json(risposta);
-});
+
+//INDEX
+router.get("/cities", (req, res) => {
+
+  const newArray = citiesArray.map((city) => {
+    return {
+      ...city,
+      foto: `/cities/${city.title}.png`
+    }
+  })
+  const city = {
+    info: {
+      total: citiesArray.length,
+    },
+    result: newArray
+  };
+
+  res.json(city);
+
+})
 
 // SHOW
 router.get("/:id", (req, res) => {
-  
+
   res.json("Show");
 });
 
