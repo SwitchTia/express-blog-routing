@@ -1,4 +1,4 @@
-const citiesArray = [
+const cityBlogArray = [
     {
         id: 1,
         title: "New York",
@@ -37,4 +37,4 @@ const citiesArray = [
     }
 
 ]
-export  { citiesArray };
+export  { cityBlogArray };

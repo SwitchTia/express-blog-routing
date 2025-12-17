@@ -1,5 +1,5 @@
 import express from "express";
-import { citiesArray } from "../data.js";
+import { cityBlogArray} from "../data.js";
 
 
 
@@ -8,8 +8,8 @@ const router = express.Router();
 //INDEX
 router.get("/", (req, res)=>{
     const response = {
-        totalCitiesToVisit: citiesArray.length,
-        listOfCities: citiesArray,
+        totalCitiesToVisit: cityBlogArray.length,
+        listOfCities: cityBlogArray,
     }
     res.json (response)
 })
@@ -18,16 +18,9 @@ router.get("/", (req, res)=>{
 //SHOW
 router.get("/:id",(req,res)=>{
     const id = parseInt(req.params.id);
-    const resp = citiesArray.find(city => city.id===id);
+    const resp = cityBlogArray.find(city => city.id===id);
     res.json (resp)
 })
-
-
-// STORE
-router.post("/", (req, res) => {
-
-  res.json("Create a new city blog");
-});
 
 
 // UPDATE
@@ -45,7 +38,13 @@ router.patch("/:id", (req, res) => {
 
 //DESTROY
 router.delete("/:id", (req, res) => {
-  res.json("Delete the blog");
+  const id = parseInt(req.params.id);
+
+  const cityIndex = cityBlogArray.findIndex(city => city.id === id);
+
+  const deletedCity = cityBlogArray.splice(cityId, 1);
+
+  res.json("CityBlog " + deletedCity[0]);
 });
 
 export default router;
