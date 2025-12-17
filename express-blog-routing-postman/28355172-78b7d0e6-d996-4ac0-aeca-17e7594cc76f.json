@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "28355172-78b7d0e6-d996-4ac0-aeca-17e7594cc76f",
+		"name": "TravelBlogExpress Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "INDEX",
+			"id": "28355172-2a07b024-960c-4fc3-a002-ef8a09ffd43d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SHOW",
+			"id": "28355172-3fd0ed96-9d4d-4f74-b768-b19839452af7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cities/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STORE",
+			"id": "28355172-f02bcd8f-e71d-4f6f-9baf-cd203531f8a8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cities/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"id": "28355172-328f3b2f-175d-43fc-8c31-62d83149c431",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cities/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MODIFY",
+			"id": "28355172-4288f2e4-95ac-46f2-a0c1-ccf736c0b75d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cities/5?title=Barcelona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities",
+						"5"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Barcelona",
+							"type": "text",
+							"id": 0
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DESTROY",
+			"id": "28355172-d5946a11-57bc-4375-a547-aca065569c1c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cities/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
