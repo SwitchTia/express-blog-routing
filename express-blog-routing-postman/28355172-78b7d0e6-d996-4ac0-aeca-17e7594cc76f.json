@@ -15,14 +15,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/cities",
+					"raw": "http://localhost:3000/movies/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"cities"
+						"movies",
+						""
 					]
 				}
 			},
